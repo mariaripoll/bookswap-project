@@ -1,3 +1,177 @@
+
 /* 
-    General Styles used on every website (Don't Repeat Yourself)
+    For all the elements same font family
 */
+
+* {
+    font-family: "inria serif";
+}
+
+/* 
+    For the horizontal line
+*/
+
+.bold-hr {
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+}
+
+/* 
+    For friends view
+*/
+
+
+.friends_box {
+    margin-bottom: 30px;
+    padding:24px;
+    border: 1px solid black;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.2);
+    border-radius: 40px;
+}
+
+.ms-n5 {
+    margin-left: -40px;
+}
+
+/* 
+    For wishlist view
+*/
+
+.card_wishlist {
+    border: none;
+    margin-left: 10px;
+    
+}
+
+.vertical-line {
+    border-left: 1px solid black;
+  }
+
+
+/* 
+    For ProfileSettings view
+*/
+
+
+h4 {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    padding-bottom: 10px;
+  }
+  
+.settings a:hover {
+    color:black;
+    background-color:rgba(173, 247, 173, 0.4); ;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+}
+
+  .nav-link {
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+  }
+  
+  .custom-update {
+    background-color: #b3d6a3;
+    border-color: #b3d6a3;
+    color: black;
+  }
+
+  .custom-update:hover {
+    background-color: #b3d6a3;
+    border-color: #b3d6a3;
+    color: black;
+  }
+
+  .alert-info-accept {
+    background-color: #b3d6a3;
+    color: black;
+  }
+
+  .alert-info-decline {
+    background-color: white;
+    border-color: #b3d6a3;
+    border-width: 2px;
+    color: black;
+    transition: background-color 0.3s ease; 
+}
+
+.alert-info-decline:hover {
+    background-color: #b3d6a3; 
+    border-color: #b3d6a3;
+}
+
+.card-text-box-public {
+    color: black;
+    font-size: 22px;
+    text-decoration: none;
+    
+}
+
+.card-text-box-public:hover{
+    color:#d9d9d9
+}
+
+.card-text-settings-icon {
+    font-size: 20px;
+    color: black;
+}
+
+.card-text-settings-icon:hover{
+    color: #d9d9d9;
+}
+  /* 
+    For Footer
+*/
+
+footer {
+    background-color: #d9d9d9;
+}
+
+  /* 
+    For carousel
+*/
+#custom-next-button.custom-carousel-control-next {
+    color: black !important;
+    background-color: transparent; 
+    border: none; 
+    font-size: 24px; 
+    line-height: 1; 
+}
+
+ /* 
+    public profile image
+*/
+
+.custom-position {
+    position: absolute;
+    top: 50%;
+    left: 13%; /* Adjust this value to position it between center and left */
+    transform: translate(-50%, -50%);
+  }
+  
+.edit-bio {
+    background-color: none;
+    border: none;
+    margin-left: 20px;
+}
+  
+  /* 
+    Carousel homepage
+*/ 
+
+
+  
+/* GENERIC CODE */
+p{
+    font-size: 17px;
+}
+
+.navbar {
+    vertical-align: middle;
+  }
+
+

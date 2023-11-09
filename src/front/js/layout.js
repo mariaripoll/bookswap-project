@@ -4,12 +4,27 @@ import ScrollToTop from "./component/scrollToTop";
 import { BackendURL } from "./component/backendURL";
 
 import { Home } from "./pages/home";
-import { Demo } from "./pages/demo";
+import { Users } from "./pages/Users";
+import { CreateAccount } from "./pages/create_account";
+import { Login } from "./pages/login"
+import { Reset } from "./pages/reset_password";
+import { BookDetails } from "./pages/book_details";
 import { Single } from "./pages/single";
+import { ProfileSettings } from "./pages/ProfileSettings";
+import { Wishlist } from "./pages/Wishlist";
+import { Friends } from "./pages/Friends";
+import { PublicProfile } from "./pages/PublicProfile";
+import { OurBooks } from "./pages/OurBooks";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import { BookCarousel } from "./component/BookCarousel";
+import { TargetCard } from "./component/targetCard";
+import { ProfileOne } from "./component/ProfileOne";
+import { ProfileTwo } from "./component/ProfileTwo";
+import NewPassword from "./pages/new_password";
+
 
 //create your first component
 const Layout = () => {
@@ -17,7 +32,7 @@ const Layout = () => {
     // you can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
     const basename = process.env.BASENAME || "";
 
-    if(!process.env.BACKEND_URL || process.env.BACKEND_URL == "") return <BackendURL/ >;
+    if (!process.env.BACKEND_URL || process.env.BACKEND_URL == "") return <BackendURL />;
 
     return (
         <div>
@@ -26,8 +41,24 @@ const Layout = () => {
                     <Navbar />
                     <Routes>
                         <Route element={<Home />} path="/" />
-                        <Route element={<Demo />} path="/demo" />
+                        <Route element={<CreateAccount />} path="/create-account" />
+                        <Route element={<Login />} path="/login" />
+                        <Route element={<BookDetails />} path="/book-details/:id" />
+                        <Route element={<Reset />} path="/reset-password" />
+                        <Route element={<NewPassword />} path="/new-password" />
                         <Route element={<Single />} path="/single/:theid" />
+                        <Route element={<ProfileSettings />} path="/ProfileSettings" />
+                        <Route element={<Wishlist />} path="/Wishlist" />
+                        <Route element={<OurBooks />} path="/OurBooks" />
+                        <Route element={<Friends />} path="/Friends" />
+                        <Route element={<Users />} path="/Users" />
+                        <Route element={<PublicProfile />} path="/PublicProfile" />
+                        <Route element={<PublicProfile />} path="/PublicProfile/:id" />
+                        <Route element={<BookCarousel />} path="/carousel" />
+                        <Route element={<TargetCard />} path="/targetCard" />
+                        <Route element={<ProfileOne />} path="/profileOne" />
+                        <Route element={<ProfileTwo />} path="/profileTwo" />
+                        <Route element={<PublicProfile />} path="/PublicProfile/:id" />
                         <Route element={<h1>Not found!</h1>} />
                     </Routes>
                     <Footer />
