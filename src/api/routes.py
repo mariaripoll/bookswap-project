@@ -354,8 +354,6 @@ def delete_friend(friendship_id):
 
 
 # POST to get review in the database
-
-
 @api.route('/books/<int:book_id>/review', methods=['POST'])
 @jwt_required()
 def add_review(book_id):
@@ -369,8 +367,8 @@ def add_review(book_id):
     db.session.commit()
     return jsonify({"message": "Review added successfully"}), 201
 
-# GET to get average rating for a book
 
+# GET to get average rating for a book
 
 @api.route('/books/<int:book_id>/average_rating', methods=['GET'])
 def get_average_rating(book_id):

@@ -609,12 +609,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 
 
-			submitReview: (bookId, rating, opinion) => {
+			submitReview: (bookId, rating, reviewText) => {
 				const reviewData = {
-					rating: rating,
-					comment: opinion
+					rating, // Assuming this is a number
+					review: reviewText // Make sure this key matches the backend expectation
 				};
-
+			
 				const options = {
 					method: 'POST',
 					headers: {
@@ -623,20 +623,24 @@ const getState = ({ getStore, getActions, setStore }) => {
 					},
 					body: JSON.stringify(reviewData)
 				};
-
-
+			
 				fetch(`${process.env.BACKEND_URL}/books/${bookId}/review`, options)
 					.then(response => {
-						if (response.ok) return response.json()
-						else throw Error('Something went wrong submitting the review')
+						if (!response.ok) {
+							throw new Error(`HTTP error! Status: ${response.status}`);
+						}
+						return response.json();
 					})
 					.then(data => {
-						console.log(data);  // Do something with the data, e.g., show a success message to the user.
+						console.log('Success:', data);
+						// Handle success scenario, like updating UI or showing a success message
 					})
 					.catch(error => {
-						console.log(error);
+						console.error('Error submitting review:', error);
+						// Handle error scenario, like showing an error message to the user
 					});
 			},
+						
 
 
 			getAverageRating: (bookId, setAverageRating) => {

@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../store/appContext";
 import { Review } from "../component/review";
 import ModalReview from "../component/modal-review";
+import BookSwapRequest from "../component/modal-bookswap";
 import { useParams } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 
@@ -22,6 +23,7 @@ export const BookDetails = () => {
 	return (
 		<div className="container bookdetails">
 			<ModalReview />
+			<BookSwapRequest />
 			<div className="container d-flex justify-content-center">
 				<div className="bookcover col-md-6 text-center">
 					<img className="bookcoverimg" src={bookInfo.cover_img} />
@@ -39,7 +41,9 @@ export const BookDetails = () => {
 
 					<div className="d-flex col-12 justify-content-center">
 						<div className="container-fluid py-5">
-							<a href="/create-account" className="btn btn-request-swap" role="button"><i class="far fa-paper-plane"></i> Request Swap</a>
+						<button type="button" className="btn btn-request-swap" data-bs-toggle="modal" data-bs-target="#bookSwapModal">
+							<i className="far fa-paper-plane"></i> Request Swap
+						</button>
 						</div>
 						<div className="container-fluid py-5">
 							<a href="/create-account" className="btn btn-add-wishlist" role="button"><i class="far fa-heart"></i> Add to Wishlist</a>
@@ -56,11 +60,6 @@ export const BookDetails = () => {
 				<Review />
 				<Review />
 				<Review />
-			</div>
-
-			<div className="container my-5 col-12">
-				<h2 className="text-center">Readers also enjoyed</h2>
-				<p className="text-center">Carroussel</p>
 			</div>
 		</div>
 	);

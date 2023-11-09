@@ -60,7 +60,7 @@ export const Home = () => {
 				<p>Join our community today by creating your account. It's quick, easy, and opens the door to a world of literary possibilities.</p>
 			</div>
 
-			<div className="container">
+			<div className="container mb-5">
 				<div className="row align-items-start">
 					<div className="col-3 px-5"></div>
 					<div className="col-6 text-center px-5" id="genres-section">
@@ -72,13 +72,6 @@ export const Home = () => {
 				</div>
 			</div>
 
-			<div className="container mt-5">
-				<h2 className="fw-bold">The best rated books</h2>
-				#Reviews#
-				<div className="text-center">
-					<Buttonsignup />
-				</div>
-			</div>
 		</div>
 	);
 };

@@ -1,7 +1,7 @@
 import React, { Component, useState } from "react";
 import "../../styles/modalreview.css";
 
-const bookSwapRequest = () => {
+const BookSwapRequest = () => {
 
 
     return (
@@ -30,4 +30,4 @@ const bookSwapRequest = () => {
     );
 };
 
-export default bookSwapRequest;
+export default BookSwapRequest;
