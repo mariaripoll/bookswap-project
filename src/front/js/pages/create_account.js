@@ -26,15 +26,7 @@ export const CreateAccount = () => {
 
                     <form className="row g-3 text-start" method="POST" action="/register" enctype="multipart/form-data" onSubmit={signUpFunction}>
 
-                        <div className="col-md-6">
-                            <label className="form-label" for="username">Choose Your Username</label>
-                            <div className="input-group">
-                                <div className="input-group-text">@</div>
-                                <input type="text" onChange={(e) => setUsername(e.target.value)} className="form-control" id="username" placeholder="Username" required />
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <label for="profileimg" className="form-label">Choose your profile photo</label>
                             <input className="form-control" type="text" onChange={(e) => setProfileimg(e.target.value)} id="profileimg" placeholder="Insert here an image URL" required />
                         </div>
